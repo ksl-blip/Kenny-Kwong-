@@ -21,7 +21,22 @@
   .bar { display:flex; align-items:center; gap:.5rem; margin:.35rem 0; font-size:.88rem; }
   .bar .lab { width:9.5rem; flex-shrink:0; }
   .bar .track { flex:1; background:#eee; height:12px; border-radius:6px; overflow:hidden; }
-  .bar .fill { height:100%; background:var(--accent); }
+  .bar .fill { height:100%; background:#1a4f8b; }
+  .bar .fill.c5 { background:#1a4f8b; }
+  .bar .fill.c4 { background:#2a6fad; }
+  .bar .fill.c3 { background:#5b8fbf; }
+  .bar .fill.c2 { background:#e6a817; }
+  .bar .fill.c1 { background:#e76f51; }
+  .bar .fill.hi { background:#2a9d8f; }
+  .bar .fill.mid { background:#1a4f8b; }
+  .bar .fill.lo { background:#94a3b8; }
+  @media print {
+    .bar .fill, .bar .fill.c5, .bar .fill.c4, .bar .fill.c3,
+    .bar .fill.c2, .bar .fill.c1, .bar .fill.hi, .bar .fill.mid, .bar .fill.lo {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
   .bar .n { width:2.2rem; text-align:right; color:var(--muted); }
   .meta { display:grid; grid-template-columns:7rem 1fr; gap:.25rem .75rem; font-size:.92rem; margin:.75rem 0; }
   .meta dt { color:var(--muted); }
@@ -30,7 +45,7 @@
   footer { margin-top:2rem; padding-top:1rem; border-top:1px solid var(--line); font-size:.85rem; color:var(--muted); }
   a { color:var(--accent); }
   ul.tight li { margin:.25rem 0; }
-  @media print { body{background:#fff;} .wrap{box-shadow:none;border:none;margin:0;max-width:none;} }
+  @media print { body{background:#fff;} .wrap{box-shadow:none;border:none;margin:0;max-width:none;} *{-webkit-print-color-adjust:exact;print-color-adjust:exact;} }
 </style>
 </head>
 <body>
@@ -51,49 +66,49 @@
   <div class="two">
     <div>
       <p><strong>整體滿意度（1–5）</strong></p>
-      <div class="bar"><span class="lab">5 非常滿意</span><span class="track"><span class="fill" style="width:17%"></span></span><span class="n">5</span></div>
-      <div class="bar"><span class="lab">4</span><span class="track"><span class="fill" style="width:45%"></span></span><span class="n">13</span></div>
-      <div class="bar"><span class="lab">3</span><span class="track"><span class="fill" style="width:24%"></span></span><span class="n">7</span></div>
-      <div class="bar"><span class="lab">2</span><span class="track"><span class="fill" style="width:14%"></span></span><span class="n">4</span></div>
-      <div class="bar"><span class="lab">1 非常不滿意</span><span class="track"><span class="fill" style="width:0%"></span></span><span class="n">0</span></div>
+      <div class="bar"><span class="lab">5 非常滿意</span><span class="track"><span class="fill c5" style="width:17%;background:#1a4f8b"></span></span><span class="n">5</span></div>
+      <div class="bar"><span class="lab">4</span><span class="track"><span class="fill c4" style="width:45%;background:#2a6fad"></span></span><span class="n">13</span></div>
+      <div class="bar"><span class="lab">3</span><span class="track"><span class="fill c3" style="width:24%;background:#5b8fbf"></span></span><span class="n">7</span></div>
+      <div class="bar"><span class="lab">2</span><span class="track"><span class="fill c2" style="width:14%;background:#e6a817"></span></span><span class="n">4</span></div>
+      <div class="bar"><span class="lab">1 非常不滿意</span><span class="track"><span class="fill c1" style="width:0%;background:#e76f51"></span></span><span class="n">0</span></div>
     </div>
     <div>
       <p><strong>是否達到專業發展期望</strong></p>
-      <div class="bar"><span class="lab">遠超期望</span><span class="track"><span class="fill" style="width:7%"></span></span><span class="n">2</span></div>
-      <div class="bar"><span class="lab">達到期望</span><span class="track"><span class="fill" style="width:48%"></span></span><span class="n">14</span></div>
-      <div class="bar"><span class="lab">大致達到</span><span class="track"><span class="fill" style="width:28%"></span></span><span class="n">8</span></div>
-      <div class="bar"><span class="lab">未達期望</span><span class="track"><span class="fill" style="width:14%"></span></span><span class="n">4</span></div>
-      <div class="bar"><span class="lab">遠低於期望</span><span class="track"><span class="fill" style="width:3%"></span></span><span class="n">1</span></div>
+      <div class="bar"><span class="lab">遠超期望</span><span class="track"><span class="fill c5" style="width:7%;background:#1a4f8b"></span></span><span class="n">2</span></div>
+      <div class="bar"><span class="lab">達到期望</span><span class="track"><span class="fill c4" style="width:48%;background:#2a6fad"></span></span><span class="n">14</span></div>
+      <div class="bar"><span class="lab">大致達到</span><span class="track"><span class="fill c3" style="width:28%;background:#5b8fbf"></span></span><span class="n">8</span></div>
+      <div class="bar"><span class="lab">未達期望</span><span class="track"><span class="fill c2" style="width:14%;background:#e6a817"></span></span><span class="n">4</span></div>
+      <div class="bar"><span class="lab">遠低於期望</span><span class="track"><span class="fill c1" style="width:3%;background:#e76f51"></span></span><span class="n">1</span></div>
     </div>
   </div>
   <p><strong>會否推薦：</strong>一定會 6、可能會 16、不太會 4、不會 3（願意推薦 76%）。</p>
   <p><strong>最有價值部分（可多選）：</strong></p>
-  <div class="bar"><span class="lab">比亞迪參觀</span><span class="track"><span class="fill" style="width:76%"></span></span><span class="n">22</span></div>
-  <div class="bar"><span class="lab">智慧製造／AI</span><span class="track"><span class="fill" style="width:28%"></span></span><span class="n">8</span></div>
-  <div class="bar"><span class="lab">現場氛圍</span><span class="track"><span class="fill" style="width:28%"></span></span><span class="n">8</span></div>
-  <div class="bar"><span class="lab">三諾參觀</span><span class="track"><span class="fill" style="width:24%"></span></span><span class="n">7</span></div>
-  <div class="bar"><span class="lab">導賞講解</span><span class="track"><span class="fill" style="width:24%"></span></span><span class="n">7</span></div>
-  <div class="bar"><span class="lab">同儕交流</span><span class="track"><span class="fill" style="width:24%"></span></span><span class="n">7</span></div>
-  <div class="bar"><span class="lab">綠色低碳</span><span class="track"><span class="fill" style="width:10%"></span></span><span class="n">3</span></div>
+  <div class="bar"><span class="lab">比亞迪參觀</span><span class="track"><span class="fill hi" style="width:76%;background:#2a9d8f"></span></span><span class="n">22</span></div>
+  <div class="bar"><span class="lab">智慧製造／AI</span><span class="track"><span class="fill hi" style="width:28%;background:#2a9d8f"></span></span><span class="n">8</span></div>
+  <div class="bar"><span class="lab">現場氛圍</span><span class="track"><span class="fill hi" style="width:28%;background:#2a9d8f"></span></span><span class="n">8</span></div>
+  <div class="bar"><span class="lab">三諾參觀</span><span class="track"><span class="fill hi" style="width:24%;background:#2a9d8f"></span></span><span class="n">7</span></div>
+  <div class="bar"><span class="lab">導賞講解</span><span class="track"><span class="fill hi" style="width:24%;background:#2a9d8f"></span></span><span class="n">7</span></div>
+  <div class="bar"><span class="lab">同儕交流</span><span class="track"><span class="fill hi" style="width:24%;background:#2a9d8f"></span></span><span class="n">7</span></div>
+  <div class="bar"><span class="lab">綠色低碳</span><span class="track"><span class="fill hi" style="width:10%;background:#2a9d8f"></span></span><span class="n">3</span></div>
 
   <h2>三、參觀內容</h2>
   <p>比亞迪安排評價較佳（4–5 分 20／29，69%）；三諾安排評價較分化（4–5 分僅 11／29，38%）。時間分配「合適／非常合適」17／29（59%）。</p>
   <div class="two">
     <div>
       <p><strong>三諾安排（1–5）</strong></p>
-      <div class="bar"><span class="lab">5</span><span class="track"><span class="fill" style="width:10%"></span></span><span class="n">3</span></div>
-      <div class="bar"><span class="lab">4</span><span class="track"><span class="fill" style="width:28%"></span></span><span class="n">8</span></div>
-      <div class="bar"><span class="lab">3</span><span class="track"><span class="fill" style="width:38%"></span></span><span class="n">11</span></div>
-      <div class="bar"><span class="lab">2</span><span class="track"><span class="fill" style="width:21%"></span></span><span class="n">6</span></div>
-      <div class="bar"><span class="lab">1</span><span class="track"><span class="fill" style="width:3%"></span></span><span class="n">1</span></div>
+      <div class="bar"><span class="lab">5</span><span class="track"><span class="fill c5" style="width:10%;background:#1a4f8b"></span></span><span class="n">3</span></div>
+      <div class="bar"><span class="lab">4</span><span class="track"><span class="fill c4" style="width:28%;background:#2a6fad"></span></span><span class="n">8</span></div>
+      <div class="bar"><span class="lab">3</span><span class="track"><span class="fill c3" style="width:38%;background:#5b8fbf"></span></span><span class="n">11</span></div>
+      <div class="bar"><span class="lab">2</span><span class="track"><span class="fill c2" style="width:21%;background:#e6a817"></span></span><span class="n">6</span></div>
+      <div class="bar"><span class="lab">1</span><span class="track"><span class="fill c1" style="width:3%;background:#e76f51"></span></span><span class="n">1</span></div>
     </div>
     <div>
       <p><strong>比亞迪安排（1–5）</strong></p>
-      <div class="bar"><span class="lab">5</span><span class="track"><span class="fill" style="width:24%"></span></span><span class="n">7</span></div>
-      <div class="bar"><span class="lab">4</span><span class="track"><span class="fill" style="width:45%"></span></span><span class="n">13</span></div>
-      <div class="bar"><span class="lab">3</span><span class="track"><span class="fill" style="width:24%"></span></span><span class="n">7</span></div>
-      <div class="bar"><span class="lab">2</span><span class="track"><span class="fill" style="width:7%"></span></span><span class="n">2</span></div>
-      <div class="bar"><span class="lab">1</span><span class="track"><span class="fill" style="width:0%"></span></span><span class="n">0</span></div>
+      <div class="bar"><span class="lab">5</span><span class="track"><span class="fill c5" style="width:24%;background:#1a4f8b"></span></span><span class="n">7</span></div>
+      <div class="bar"><span class="lab">4</span><span class="track"><span class="fill c4" style="width:45%;background:#2a6fad"></span></span><span class="n">13</span></div>
+      <div class="bar"><span class="lab">3</span><span class="track"><span class="fill c3" style="width:24%;background:#5b8fbf"></span></span><span class="n">7</span></div>
+      <div class="bar"><span class="lab">2</span><span class="track"><span class="fill c2" style="width:7%;background:#e6a817"></span></span><span class="n">2</span></div>
+      <div class="bar"><span class="lab">1</span><span class="track"><span class="fill c1" style="width:0%;background:#e76f51"></span></span><span class="n">0</span></div>
     </div>
   </div>
   <table>
@@ -126,21 +141,21 @@
   <div class="two">
     <div>
       <p><strong>啟發程度（1–5）</strong></p>
-      <div class="bar"><span class="lab">5</span><span class="track"><span class="fill" style="width:10%"></span></span><span class="n">3</span></div>
-      <div class="bar"><span class="lab">4</span><span class="track"><span class="fill" style="width:38%"></span></span><span class="n">11</span></div>
-      <div class="bar"><span class="lab">3</span><span class="track"><span class="fill" style="width:34%"></span></span><span class="n">10</span></div>
-      <div class="bar"><span class="lab">2</span><span class="track"><span class="fill" style="width:14%"></span></span><span class="n">4</span></div>
-      <div class="bar"><span class="lab">1</span><span class="track"><span class="fill" style="width:3%"></span></span><span class="n">1</span></div>
+      <div class="bar"><span class="lab">5</span><span class="track"><span class="fill c5" style="width:10%;background:#1a4f8b"></span></span><span class="n">3</span></div>
+      <div class="bar"><span class="lab">4</span><span class="track"><span class="fill c4" style="width:38%;background:#2a6fad"></span></span><span class="n">11</span></div>
+      <div class="bar"><span class="lab">3</span><span class="track"><span class="fill c3" style="width:34%;background:#5b8fbf"></span></span><span class="n">10</span></div>
+      <div class="bar"><span class="lab">2</span><span class="track"><span class="fill c2" style="width:14%;background:#e6a817"></span></span><span class="n">4</span></div>
+      <div class="bar"><span class="lab">1</span><span class="track"><span class="fill c1" style="width:3%;background:#e76f51"></span></span><span class="n">1</span></div>
     </div>
     <div>
       <p><strong>可能校本應用（可多選）</strong></p>
-      <div class="bar"><span class="lab">產業案例</span><span class="track"><span class="fill" style="width:55%"></span></span><span class="n">16</span></div>
-      <div class="bar"><span class="lab">STEM課程</span><span class="track"><span class="fill" style="width:41%"></span></span><span class="n">12</span></div>
-      <div class="bar"><span class="lab">生涯規劃</span><span class="track"><span class="fill" style="width:38%"></span></span><span class="n">11</span></div>
-      <div class="bar"><span class="lab">價值觀教育</span><span class="track"><span class="fill" style="width:38%"></span></span><span class="n">11</span></div>
-      <div class="bar"><span class="lab">暫未想到</span><span class="track"><span class="fill" style="width:31%"></span></span><span class="n">9</span></div>
-      <div class="bar"><span class="lab">跨科專題</span><span class="track"><span class="fill" style="width:24%"></span></span><span class="n">7</span></div>
-      <div class="bar"><span class="lab">校本分享</span><span class="track"><span class="fill" style="width:3%"></span></span><span class="n">1</span></div>
+      <div class="bar"><span class="lab">產業案例</span><span class="track"><span class="fill hi" style="width:55%;background:#2a9d8f"></span></span><span class="n">16</span></div>
+      <div class="bar"><span class="lab">STEM課程</span><span class="track"><span class="fill hi" style="width:41%;background:#2a9d8f"></span></span><span class="n">12</span></div>
+      <div class="bar"><span class="lab">生涯規劃</span><span class="track"><span class="fill hi" style="width:38%;background:#2a9d8f"></span></span><span class="n">11</span></div>
+      <div class="bar"><span class="lab">價值觀教育</span><span class="track"><span class="fill hi" style="width:38%;background:#2a9d8f"></span></span><span class="n">11</span></div>
+      <div class="bar"><span class="lab">暫未想到</span><span class="track"><span class="fill hi" style="width:31%;background:#2a9d8f"></span></span><span class="n">9</span></div>
+      <div class="bar"><span class="lab">跨科專題</span><span class="track"><span class="fill hi" style="width:24%;background:#2a9d8f"></span></span><span class="n">7</span></div>
+      <div class="bar"><span class="lab">校本分享</span><span class="track"><span class="fill hi" style="width:3%;background:#2a9d8f"></span></span><span class="n">1</span></div>
     </div>
   </div>
 
